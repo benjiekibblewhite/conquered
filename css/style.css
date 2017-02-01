@@ -1,0 +1,390 @@
+/****************
+MAIN ELEMENTS
+****************/
+
+* {
+	box-sizing: border-box;
+} 
+
+body {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #333;
+}
+
+h1,
+h2,
+span {
+  color: white;
+  font-weight: 400;
+  text-shadow: 1px 1px black; /*** Adds subtle drop-shadow for legibility ***/
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
+section {
+  width: 90%;
+  max-width: 1150px;
+  margin: auto;
+}
+
+
+/*** Link buttons ***/
+
+.button {
+  color: #333;
+  background-color: white;
+  border: 1px solid #646d7c;
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+
+
+/****************
+NAV BAR
+****************/
+
+nav {
+  background-color: #383e4c;
+}
+
+nav ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+nav li {
+  text-align: center;
+}
+nav a{
+  color: white;
+  background-color: #383e4c;
+  border: 1px solid #646d7c;
+  padding: 10px 15px;
+  display: block;
+}
+
+nav .selected {
+  background-color: #49505f;
+}
+
+
+
+/****************
+HEADER 
+****************/
+
+header {
+ background-image: url("../img/bg-1.jpg");
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center top; 
+ text-align: center;
+ overflow: auto;
+ height: 400px;
+ display: flex;
+ justify-content:center;
+ align-content:center;
+ flex-direction:column; 
+}
+
+header h1 {
+  margin-bottom: 2px
+}
+
+header span {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+
+
+/****************
+CONTENT BOXES 
+****************/
+
+/*** Main Content Box Style ***/
+
+.contentbox {
+  background-color: #f2f2f2;
+  margin: 30px 10px; 
+/*  padding-bottom: 40px;*/
+}
+
+.contentbox h3,
+.contentbox p {
+  padding: 0 10px;
+}
+
+/*** Three Column Section ***/
+
+.threecolumngreen h3 {
+  color: #178a27; 
+}
+
+.button-green {
+  border: #178a27;
+  background-color: #178a27;
+  color: white;  
+}
+
+.threecolumnblue h3 {
+  color: #1686c1; 
+}
+
+.button-blue {
+  border: #1686c1;
+  background-color: #1686c1;
+  color: white;  
+}
+
+.threecolumnred h3 {
+  color: #852406; 
+}
+
+.button-red {
+  border: #852406;
+  background-color: #852406;
+  color: white;  
+}
+
+.button-green,
+.button-blue,
+.button-red {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -20%);
+}
+
+/*** Two Column Section ***/
+
+.twocolumnleft h3,
+.twocolumnright h3 {
+  text-align: center;
+}
+
+.twocolumnright .button {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -20%);
+}
+
+/*** Four Column Section ***/
+
+
+.fourcolumntwo .button,
+.fourcolumnfour .button {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -20%);
+}
+
+
+/*** Single Column Section ***/
+
+.singlecolumn .button {
+  position: relative;
+  left: 15%;
+  top: 50%;
+  transform: translate(-75%, -20%);
+}
+
+
+/****************
+BANNERS
+****************/
+
+.servicesbanner {
+  height: 300px; 
+  background-image: url('../img/bg-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column; 
+}
+
+.servicesbanner p {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+}
+
+.contactbanner {
+  height: 400px; 
+  background-image: url('../img/bg-3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content:center;
+  align-content:center;
+  flex-direction:column; 
+}
+
+.contactbanner p {
+  width: 75%;
+  margin: 0 auto;
+  display: block;
+  color: #333;
+  background-color: rgba(255,255,255,0.5);
+  padding: 30px;
+  border-radius: 15px;
+}
+
+
+/****************
+FOOTER
+****************/
+
+footer {
+  margin-top: 20px;
+  border-top: 1px solid lightgrey;
+  font-size: .75em;
+  text-align: center;
+}
+
+/*** Back to Top Button - fixed position ***/
+
+.top-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.top-button {
+  width: auto;
+}
+
+
+
+
+/****************
+MEDIA QUERIES
+****************/
+
+
+@media (min-width: 700px) {
+
+/***** Nav Bar *****/  
+
+    nav {
+    overflow: auto;
+    text-align: center;
+    }
+  
+    nav a,
+    nav li{
+      display: inline-block;
+      margin: 5px 8px;
+    }
+
+/***** Three Column Section *****/
+
+ 
+  .threecolumngreen,
+  .threecolumnred,
+  .threecolumnblue {
+    float: left;
+    width: calc(33% - 15px);
+  }
+  
+  .threecolumnred {
+    margin-right: 0px;
+  }
+/***** Two Column Section *****/
+
+.twocolumn { /* Makes all columns equal height regardless of content*/
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  clear: both;
+}
+
+.twocolumnleft,
+.twocolumnright {
+  flex: 1;
+}
+
+
+.twocolumnleft {
+  float: left;
+  width: 45%;
+}
+
+.twocolumnright {
+  float: right;
+  width: 45%;
+}
+
+
+/***** Four Column Section *****/
+
+.fourcolumn { /* Makes all columns equal height regardless of content*/
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.fourcolumnone,
+.fourcolumntwo,
+.fourcolumnthree,
+.fourcolumnfour {
+  flex: 1;
+  float: left;
+  width: calc(25% - 20px);
+}
+
+.forcolumnfour {
+  margin-right: 0;
+}
+
+/***** One Column Section *****/
+
+.singlecolumn {
+  clear: both;
+}
+
+/***** Clear Fix *****/
+
+
+  .clearfix:after {
+     content: "."; /* Older browser do not support empty content */
+     visibility: hidden;
+     display: block;
+     height: 0;
+     clear: both;
+  }
+
+}
